@@ -1,0 +1,26 @@
+{{price|currency}}
+<br/>
+
+<textarea name="{{ name }}" (click)="onClick()" (focusin)="onFocusIn()" (focusout)="onFocusOut()"></textarea>
+<p>
+  Start editing to see some magic happen :) <mark appOnly>Sirloin pork belly flank</mark>
+</p>
+<input type="text" #login (focusin)="aff(login.value)">
+<br>
+<!--counter coding-->
+<div class="row">
+<!--<button (click)="verifEnf() ">verif enfant</button> -->
+  <app-parent></app-parent>
+</div>
+<!--test coding-->
+<app-test [inputData]="data"></app-test>
+<br>
+<!--voter coding-->
+voter {{answer}}
+<app-voter
+ [question]="question"
+ [yesAnswer]="yesAnswer"
+ [noAnswer]="noAnswer"
+  (output)="vote($event)"
+ ></app-voter>
+<br>
