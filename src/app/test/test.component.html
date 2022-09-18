@@ -1,0 +1,13 @@
+
+<ng-container *ngIf="inputData && inputData.length;else elseTemp">
+    <div id="detailList" *ngFor="let l of inputData">
+        <div [ngStyle]="{'color':l.length%2 ===0 ? 'green':'red'}">
+            {{l}}
+        </div>
+    </div>
+</ng-container>
+<ng-template #elseTemp>
+ <div id="noData">
+    noData
+ </div>
+</ng-template>
